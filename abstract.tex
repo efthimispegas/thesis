@@ -1,35 +1,23 @@
 \begin{acknowledgements}
-Θα ήθελα να ευχαριστήσω τον επιβλέποντα καθηγητή κ. Π. 
+Το παρόν έργο διεξήχθη στο Εργαστήριο Ευφυών Συστημάτων, Περιεχομένου και Αλληλεπίδρασης του τμήματος Ηλεκτρολόγων Μηχανικών και Μηχανικών Η/Υ του Εθνικού Μετσόβιου Πολυτεχνείου, υπό την επίβλεψη και καθοδήγηση του καθηγητή Δρ. Γεωργίου Στάμου. Η διπλωματική αυτή θεμελιώνεται στις κυριότερες αρχές που διέπουν την Ανάπτυξη Διαδικτυακών Εφαρμογών, αλλά ταυτοχρόνως διερευνά την ομορφιά και το μεγαλείο των πιο σύγχρονων διαδικτυακών τεχνολογιών του σήμερα.
 
-Επίσης ευχαριστώ ιδιαίτερα τον μεταπτυχιακό φοιτητή κ. ... για την καθοδήγηση και ... 
+Θα ήθελα να ευχαριστήσω τους καθηγητές και επιβλέποντές μου Δρ. Γ. Στάμου και Δρ. Β. Τζουβάρα για την ώθηση που μου έδωσαν ώστε να εμπνευστώ την κεντρική ιδέα του παρόντος έργου και την εμπιστοσύνη που μου έδειξαν στην πρωτοβουλία μου αυτή. Ένα μεγάλο ευχαριστώ αξίζει και σε όλους τους υπόλοιπους καθηγητές μου, για την διδασκαλία τους και τις γνώσεις που μου μετέδωσαν κατά τη διάρκεια των σπουδών μου. 
 
-Τέλος θα ήθελα να ευχαριστήσω την οικογένειά μου, ... 
+Ευχαριστώ ιδιαιτέρως την μεταπτυχιακό Μαρία Ράλλη για την στήριξή της από την αρχή αυτής της προσπάθειας, την ενθαρρυντική στάση της, τις συβουλές της και τις γνώσεις της. Η καθοδήγησή της και η καλή διάθεση που μου έδειξε με βοήθησαν σημαντικά στην επίτευξη του έργου μου.
+
+Τέλος, αφιερώνω το παρόν έργο στην οικογένειά μου, για την αμέριστη στήριξη και εμπιστοσύνη που μου έδειξαν στις επιλογές και στις σπουδές μου. Ευχαριστώ τον αδερφό και την αδερφή μου που συνεισέφεραν με το δικό τους τρόπο ο καθένας στην προσπάθειά μου αυτή, καθώς επίσης και τους γονείς μου, οι οποίοι μου έμαθαν να ακολουθώ πάντοτε τα όνειρά μου και να επιτρατεύομαι τη γνώση ως σύμμαχο σε όλα μου τα προβλήματα. Τίποτε δεν είναι πιο πολύτιμο από τη γνώση. Σας είμαι ευγνώμων για τον άνθρωπο στον οποίο έχω εξελιχθεί σήμερα.
 \end{acknowledgements}
 
 
 \begin{abstract}
-Αντικείμενο της διπλωματικής εργασίας είναι η ανάπτυξη και υλοποίηση ενός αλγορίθμου για την εύρεση πιθανότερων εγγύτερων γειτόνων 
-από συγκεκριμένες σημειακές εστίες σε μία υποθετική υπηρεσία για κατόχους κινητών τηλεφώνων. Όποτε κάποιος χρήστης υποβάλλει ένα ερώτημα, 
-θέτει τρία κριτήρια: \tl{(i)} μία σημειακή εστία ενδιαφέροντος \textit{\tl{q}}, \tl{(ii)} τον επιθυμητό αριθμό \textit{\tl{k}} των αναζητούμενων γειτόνων, 
-καθώς και \tl{(iii)} ένα κατώφλι πιθανότητας  $\theta$. 
 
-Για λόγους προστασίας του απορρήτου, κανένας χρήστης δεν αποκαλύπτει στους υπόλοιπους το ακριβές γωγραφικό στίγμα του, 
-αλλά δηλώνει μία ευρύτερη \textit{περιοχή αβεβαιότητας}. Στην προκειμένη περίπτωση, οι περιοχές αυτές μοντελοποιούνται σύμφωνα με την κανονική κατανομή. 
-Φυσικά, η αβεβαιότητα μπορεί να εχει διαφορετικές παραμέτρους, εκφράζοντας διαφορετικές βαθμίδες ιδωτικότητας. 
-Με τον όρο ``\textit{πιθανότεροι εγγύτεροι γείτονες}'', εννοούμε ότι σε μία συγεκριμένη περιοχή αναζήτησης γύρω από την εστία  \textit{\tl{q}}, 
-έχουν βρεθεί τουλάχιστον \textit{\tl{k}} κινούμενοι χρήστες με πιθανοτική κάλυψη μεγαλύτερη από το δεδομένο κατώφλι $\theta$.
-
-Η εργασία επικεντρώνεται κυρίως στην ανάπτυξη τεχνικών δεικτοδότησης, φιλτραρίσματος και  κλαδέματος βάσει των οποίων 
-θα μπορούμε να μειώσουμε το κόστος και τον χρόνο επεξεργασίας των δεδομένων. Ο αλγόριθμος που προτείνεται επιλέχτηκε να 
-είναι προσεγγιστικός ως προς τον υπολογισμό της πιθανοτικής κάλυψης των περιοχών αβεβαιότητας και παρέχει μία λύση στο 
-πρόβλημα της αποτίμησης πιθανοτικών ερωτημάτων εγγύτερων γειτόνων για αβέβαιες θέσεις κινούμενων αντικειμένων. Με εφαρμογή
-των παραπάνω τεχνικών, πραγματοποιήθηκαν πειράματα σε συνθετικά δεδομένα πάνω στον χάρτη της Αττικής, από τα οποία προέκυψαν 
-θετικά αποτελέσματα. Επίσης, επιβεβαιώθηκαν οι αναμενόμενες επιδόσεις τους σχετικά με τους χρόνους εκτέλεσης και την ακρίβεια 
-των απαντήσεων. Αυτό που μπορεί να εξαχθεί ως γενικό συμπέρασμα της εργασίας είναι ότι ο εν λόγω αλγόριθμος είναι κατάλληλος για 
-προβλήματα πραγματικού χρόνου, θυσιάζοντας την ακρίβεια για χάρη της έγκαιρης απόκρισης.
+Τα  προβλήματα  επίτευξης  επικοινωνίας σήμερα έχουν πλέον εκλείψει. Χάρη στην πληθώρα των μέσων κοινωνικής δικτύωσης, μπορεί κανείς να αναζητήσει, να συνομιλήσει ή να γνωρίσει άλλα άτομα άμεσα. Ωστόσο, η απότομη αυτή στροφή στην διαπροσωπική επικοινωνία έχει διεισδύσει υπερβολικά στην προσωπική ζωή δημιουργώντας νέα εμπόδια και κινδύνους που περισσότερο δυσχεραίνουν, παρά καλύπτουν τις ανάγκες των χρηστών για επικοινωνία. Η παρούσα διπλωματική εργασία διερευνά τρόπους αντιμετώπισης του παραπάνω φαινομένου, μέσα από την ανάπτυξη μιας καινοτόμου εφαρμογής που στηρίζεται σε πληθοποριστικές πρακτικές. Η εφαρμογή θα εισάγει τους χρήστες της σε μια νέα εμπειρία, η οποία σκοπό έχει την ανάδειξη των δυνατοτήτων των χρηστών της, καθώς επίσης και την προβολή των σημερινών πολιτισμικών γεγονότων. Αυτό θα είναι εφικτό αξιοποιώντας την γνώση και την εμπειρία των χρηστών εντός της εφαρμογής για την άσκηση κριτικής, τον σχολιασμό και την συζήτηση με επίκεντρο εκδηλώσεις που αφορούν την πολιτισμική κοινότητα. Με αυτό τον τρόπο, αντιστρέφονται οι ρόλοι, καθώς η εφαρμογή παύει να αποτελεί τον πομπό όπως συνηθίζεται σήμερα, αλλά γίνεται ο δέκτης της πληροφορίας. Οι χρήστες με τη σειρά τους, θα αποτελούν την πηγή της πληροφορίας, χάρη στη γνώση που θα παρέχουν μέσα από τη χρήση της εφαρμογής. Αυτό θα οδηγήσει στη διαμόρφωση μιας πιο ενεργητικής στάσης απέναντι στα πολιτισμικά και κοινωνικά δρώμενα, με αποτέλεσμα την συμμετοχή του κοινωνικού συνόλου σε περισσότερα γεγονότα και εκδηλώσεις.
+\newline
+\indent
+Η παραπληροφόρηση και η μονόπλευρη διαφήμιση στις μέρες μας, αφήνει ελάχιστα περιθώρια στους νέους που θέλουν να εξερευνήσουν την πόλη τους, να δοκιμάσουν νέες εμπειρίες και να ξεφύγουν από τον τετριμμένο τρόπο διασκέδασης. Ακόμη, η επιλογή ενός μέρους με βάση τις προτιμήσεις, μειώνει περισσότερο τις επιλογές καθώς οι ενδιαφερόμενοι επιλέγουν περισσότερο με βάση τι είναι σίγουρο και γνωστό, και λιγότερο με βάση τις προσωπικές τους επιθυμίες. Στόχος μας είναι η ανάπτυξη ενός καινοτόμου τρόπου γεφύρωσης του χάσματος που δημιουργούν οι σημερινοί ψηφιακοί κίνδυνοι, μέσα από τη χρήση σύγχρονων τεχνολογιών και πρωτοπόρων ιδεών. Η προσοχή μας θα επικεντρωθεί στη διαμόρφωση μιας εφαρμογής, της οποίας πρωταρχικός σκοπός είναι η διευκόλυνση της διαδικασίας της επικοινωνίας και της διασκέδασης με τη χρήση ενός νέου συστήματος μηνυμάτων σε τοποθεσίες επάνω σε χάρτη. Με αυτό τον τρόπο οι χρήστες θα μπορούν να πληροφορηθούν άμεσα για το τι συμβαίνει στην περιοχή ή το μέρος ενδιαφέροντος, να αλληλεπιδράσουν σε πραγματικό χρόνο με τους ευρισκόμενους την παρούσα χρονική στιγμή εκεί, να εξερευνήσουν νέα μέρη και να απολαύσουν τη διαδικασία της οργάνωσης της διασκέδασης. Πρωτίστως όμως, στόχος της εφαρμογής είναι να άρει τα σημερινά στερεότυπα για τις κοινωνικές ομάδες μεταξύ των νέων, φέρνοντας πιο κοντά το χρήστη με τα ενδιαφέροντά του. Να μετατρέψει σε πλειονότητες τις μειονότητες εκείνων που έχουν παραγκωνιστεί από το υπόλοιπο σύνολο λόγω των διαφορετικών αντιλήψεων και ενδιαφερόντων. Να ρίξει φως σε εκείνα τα μέρη που δεν παίρνουν την αντικειμενική αξία που τους αναλογεί. Να δώσει μάτια σε εκείνα τα άτομα  που επιλέγουν να ακολουθούν τυφλά την υπόλοιπη μάζα επειδή νομίζουν πως είναι μόνοι. Κάθε άτομο, οποιασδήποτε ομάδας, ηλικίας, γένους ή καταγωγής έχει δικαίωμα στον πολιτισμό και στην ενημέρωση. Δουλειά μας είναι να το κάνουμε ευρέως γνωστό.
 
 \begin{keywords}
-  Αβεβαιότητα, Πιθανοτικά ερωτήματα εγγύτερων γειτόνων, διδιάστατη κανονική κατανομή, κινούμενα αντικείμενα, ρεύματα δεδομένων.
+  Ανάπτυξη Εφαρμογών, Κινητή Εφαρμογή, Εξυπηρετητής, Βάση Δεδομένων, Πληθοπορισμός, \tl{React, React Native, JavaScript, Google Maps, Foursquare, RESTful APIs, Expo, Redux, MERN, Full Stack. }
 \end{keywords}
 
 \end{abstract}
@@ -37,22 +25,14 @@
 
 
 \begin{abstracteng}
-\tl{The purpose of this diploma thesis is to develop and implement an algorithm for most likely nearest neighbors monitoring from 
-specific focal points in a hypothetical service for smartphone users. Whenever a user submits a most likely nearest neighbors query, 
-sets three criteria: (i) a focal point of interest \textit{q}, (ii) the desired number \textit{k} of nearest neigbors, and (iii) a probability 
-threshold $\theta$.}
+\tl{The problems of reaching communication today are gone. Thanks to the abundance of social media, one can search, chat or meet other people directly. However, this steep shift in interpersonal communication has penetrated too much into personal life, creating new barriers and dangers that make it harder to address users' needs for communication. This diploma thesis explores ways to address this phenomenon, through the development of an innovative application based on crowdsourcing techniques. The application will introduce its users to a new experience, which aims at highlighting the capabilities of its users, as well as the cultural events that take place today. This will be feasible by leveraging the users' knowledge and experience within the app for reviewing, commenting and discussing community-centered cultural events. In this way, the roles are reversed as the application ceases to be the transmitter of information as it is used to be today, but becomes the receiver of the information. Users, on the other hand, will be the source of this information, thanks to the knowledge they will provide through the application's interface. This will lead to a more active attitude towards cultural and social events.}
 
-\tl{Because of privacy protection reasons, no user compromises their geographical position to the rest, but declares a wider \textit{uncertainty region}. 
-In this case, these regions are modelled according to the bivariate Gaussian distribution. Of course, uncertainty can acquire different parameters, expressing 
-different scales of privacy. By using the term \textit{$``$most likely nearest neighbors$"$}, we mean that in a certain search region arount point \textit{q}, \textit{k} 
-moving users with probabilistic coverage above a certain threshold $\theta$ have been found.}
+\tl{Disinformation and one-sided advertising nowadays leaves little room for young people to explore their city, try new experiences and escape the trivial way of having fun. In addition, choosing a preference-based part reduces ones choices, as people choose more on the basis of what is certain and familiar, and less on the basis of their personal wishes. Our goal is to present an innovative way to bridge the gap created by today's digital dangers through the use of modern technologies and pioneering ideas. Our focus will be the developing an application, whose primary purpose is to facilitate the communication and entertainment process by using a new messaging system on map locations. In this way, users can instantly learn about what's happening in their area or at the place of interest, interact in real time with those currently present at the event, explore new places, and enjoy the process of organizing their plans for having fun. Above all, however, the main goal of this application is to lift the current stereotypes for social groups among young people, bringing the user closer to their interests. Convert to minorities those who have been crowded out of the rest due to differences based on their interests. To shed light on those places that do not get the value they deserve. Give eyes to those people who choose to blindly follow the rest of the mass, because they think they are alone. Every person, of any age, gender or background, has a right into culture and information. Our job is to make it widely known.}
 
-\tl{This thesis mainly focuses on developing indexing, filtering and pruning techniques which will enable us to reduce the cost and processing time of data. The suggested 
-algorithm is deliberately chosen to be approximate in the calculation of probabilistic coverage  of uncertain regions and provides a solution to the problem of answering probabilistic nearest neighbor 
-queries for uncertain positions of moving objects. By utilizing the above techniques, a experimental study was conducted against synthetic datasets generated using the map of Athens. In addition, the expected performance on the execution times and accuracy of answers was confirmed. The overall conclusion of this thesis is that the algorithm is suitable for real time problems, where some accuracy may be sacrificed for the benefit of timely response.}
+
 
 \begin{keywordseng}
-    \tl{Uncertainty, Probabilistic nearest neighbor queries, bivariate Gaussian distribution, moving objects, data streams. }
+    \tl{App Development, Mobile Application, Server, Database, Crowdsourcing, React, React Native, JavaScript, Node, Express, Mongo, Google Maps, Foursquare, RESTful APIs, Expo, Redux, MERN, Full Stack. }
 \end{keywordseng}
 
 \end{abstracteng}
